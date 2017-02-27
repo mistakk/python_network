@@ -15,7 +15,7 @@ def reuse_socket_addr():
 			print 'Connected by %s:%s' % (addr[0], addr[1])		
 			#print the client message
 			while True:
-				data= connection.recv(1000)
+				data= connection.recv(len("Test message. This will be echoed"))
 				if not data:
 					break
 				message = "I am client and I have receive your message"

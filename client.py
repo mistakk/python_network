@@ -15,7 +15,7 @@ def echo_client(port):
 		sock.sendall(message)
 		# Look for the response
 		amount_received = 0
-		amount_expected = 10000
+		amount_expected = len("I am client and I have receive your message")
 		while amount_received < amount_expected:
 			data = sock.recv(16)
 			if not data:
